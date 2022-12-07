@@ -1,0 +1,48 @@
+/* images of examples */
+.examples {
+  padding-bottom: 94px;
+}
+.examples__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $second-color-text;
+}
+.examples__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.examples__item {
+  position: relative;
+  // width: calc((100% - 60px) / 3);
+  @include widthItem(3);
+  &:not(:last-child) {
+    margin-right: $indent;
+  }
+}
+.examples__dscr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}

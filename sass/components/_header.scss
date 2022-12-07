@@ -1,0 +1,9 @@
+/* header */
+.header {
+  background-color: $primary-white-color;
+  border-bottom: 1px solid $border-color;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,204 @@
+/* modal window */
+.modal-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  @include transition(opacity, visibility);
+}
+.modal-backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+}
+.modal {
+  position: absolute;
+  padding: 40px;
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  @include transition(transform);
+  background: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal .close-sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  /* left: 496px; */
+  right: 8px;
+  top: 8px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.close-icon {
+  fill: $third-color-text;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal__text {
+  margin-bottom: 12px;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $second-color-text;
+}
+.modal__form {
+  position: relative;
+}
+.input-line {
+  margin-bottom: 10px;
+}
+.modal__label {
+  display: block;
+  /* width: 100%; */
+  margin-bottom: 4px;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $color-text;
+}
+.input-wrapper {
+  position: relative;
+}
+.modal__input {
+  padding: 0 12px 0 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include transition(border);
+  &:focus {
+    outline: transparent;
+    border: 1px solid $accent-color;
+  }
+}
+.modal__input:focus + .input-icon {
+  fill: $accent-color;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: $second-color-text;
+  @include transition(fill);
+}
+.input-line-textarea {
+  /* display: block; */
+  margin-bottom: 20px;
+}
+.modal__textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  @include transition(border);
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color:rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    outline: 1px solid transparent;
+    border: 1px solid $accent-color;
+  }
+}
+.check-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $indent;
+}
+.checkbox-agree {
+  display: flex;
+  align-items: center;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $color-text;
+}
+.checkbox-agree .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $second-color-text;
+  border-radius: 2px;
+}
+.checkbox-agree .agree-icon {
+  fill: transparent;
+}
+.check-line input:checked + .checkbox-agree .icon-wrapper {
+  background-color: $accent-color;
+  border: none;
+}
+.check-line input:checked + .checkbox-agree .agree-icon {
+  fill: $primary-white-color;
+}
+.agree-text {
+  margin-left: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  color: $accent-color;
+}
+.modal__button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 52px;
+  background-color: $accent-color;
+  color: $primary-white-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $second-accent-color;
+  }
+}
