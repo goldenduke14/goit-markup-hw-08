@@ -1,11 +1,31 @@
 /* navigation */
 .site-nav {
-  display: flex;
+  display: none;
   /* align-items: flex-start; */
+
+  // tablet
+  @media screen and (min-width: $tablet) {
+    display: flex;    
+  }
+
+  // desktop
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  
+  // tablet
+  @media screen and (min-width: $tablet) {
+    margin-right: 50px;
+  }
+
+  // desktop
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
+  }
 }
+
 .site-nav__link {
   display: block;
   padding-top: 32px;
