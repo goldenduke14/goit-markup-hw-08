@@ -97,15 +97,15 @@
   }
 }
 .features__img {
-  /* display: flex; */
-  padding: 25px 90px;
+  display: flex;
+  // padding: 25px 190px;
   margin-bottom: 30px;
   height: 120px;
   background-color: $second-bg-color;
   border-radius: 4px;
   text-align: center;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 .features__subtitle {
   margin-top: 0;

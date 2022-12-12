@@ -759,15 +759,20 @@ img {
 }
 
 .features__img {
-  /* display: flex; */
-  padding: 25px 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 30px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   text-align: center;
-  /* justify-content: center;
-  align-items: center; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .features__subtitle {
