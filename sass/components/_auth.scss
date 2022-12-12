@@ -17,7 +17,7 @@
 .auth-nav__item:not(:last-child) {
 
   // tablet
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-bottom: 10px;
   }
   
