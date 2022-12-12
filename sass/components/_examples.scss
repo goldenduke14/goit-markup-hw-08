@@ -1,5 +1,15 @@
 /* images of examples */
 .examples {
+  // mobile, tablet
+  @media screen and (max-width:1199px) {
+    display: none;
+  }
+}
+
+// desktop
+@media screen and (min-width:$desktop) {
+.examples {
+  display: block;
   padding-bottom: 94px;
 }
 .examples__title {
@@ -45,4 +55,5 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $primary-white-color;
+}
 }
