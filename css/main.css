@@ -1120,7 +1120,6 @@ img {
 .address__list {
   list-style: none;
   font-style: normal;
-  margin-bottom: 60px;
 }
 
 .footer__content {
@@ -1129,7 +1128,30 @@ img {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-address_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__address {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__address {
+    margin-right: auto;
+  }
+}
+
 .address__link {
+  font-size: 14px;
+  line-height: 1.14;
   color: #ffffff;
   text-decoration: none;
   -webkit-transition-property: color;
@@ -1145,15 +1167,22 @@ img {
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .address__contacts {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.social-media {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .social-media {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social-media {
+    padding-top: 5px;
+  }
 }
 
 .social-media__subtitle {
@@ -1219,6 +1248,9 @@ img {
   margin-bottom: 20px;
   padding-top: 0;
   padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
 }
 
 .logo__studio--white {
@@ -1258,9 +1290,8 @@ img {
 .subscr__mail {
   margin-bottom: 20px;
   padding: 15px 16px;
-  width: 450px;
+  width: 350px;
   height: 50px;
-  margin-right: 12px;
   background-color: #2f303a;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1333,6 +1364,11 @@ img {
           align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .subscr__mail {
+    width: 450px;
+  }
 }
 
 .subscr__btn {
