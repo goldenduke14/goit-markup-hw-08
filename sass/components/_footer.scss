@@ -26,7 +26,7 @@
   }
 }
 
-.footer-address_mobile {
+.footer-address__tablet {
 
   // tablet
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -64,6 +64,7 @@
   }
 }
 .address__link {
+  display: block;
   font-size: 14px;
   line-height: 1.14;
   color: $primary-white-color;
