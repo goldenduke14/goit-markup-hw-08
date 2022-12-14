@@ -63,6 +63,7 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -1469,11 +1470,20 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  outline: 1px solid teal;
 }
 @media screen and (max-width: 767px) {
   .portfolio__filtr {
+    max-width: 327px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    row-gap: 15px;
   }
 }
 @media screen and (min-width: 768px) {

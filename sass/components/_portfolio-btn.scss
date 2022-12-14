@@ -2,10 +2,15 @@
 .portfolio__filtr {
   margin-bottom: 40px;
   display: flex;
+  outline: 1px solid teal;
 
   // mobile
   @media screen and (max-width: 767px) {
+    max-width: 327px;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 8px;
+    row-gap: 15px;
   }
   
 // tablet
