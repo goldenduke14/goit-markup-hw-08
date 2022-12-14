@@ -1543,24 +1543,44 @@ img {
   }
 }
 /* list of projects */
-.portfolio__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .portfolio__item {
-  margin-right: 30px;
   margin-bottom: 30px;
-  width: calc((100% - 30px * (3 - 1)) / 3);
 }
-.portfolio__item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (max-width: 1199px) {
+  .portfolio__item:last-child {
+    margin-bottom: 0;
+  }
 }
-.portfolio__item:nth-last-child(-n+3) {
-  margin-bottom: 0px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__item {
+    width: calc((100% - 30px * (2 - 1)) / 2);
+    margin-right: 30px;
+  }
+  .portfolio__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    width: calc((100% - 30px * (3 - 1)) / 3);
+    margin-right: 30px;
+  }
+  .portfolio__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolio__item:nth-last-child(-n+3) {
+    margin-bottom: 0px;
+  }
 }
 
 .portfolio__link {
