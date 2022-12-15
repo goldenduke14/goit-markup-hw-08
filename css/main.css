@@ -63,7 +63,6 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -1470,7 +1469,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  outline: 1px solid teal;
 }
 @media screen and (max-width: 767px) {
   .portfolio__filtr {
@@ -1558,7 +1556,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px;
-  outline: 1px solid yellowgreen;
 }
 @media screen and (max-width: 1199px) {
   .portfolio__item:last-child {
