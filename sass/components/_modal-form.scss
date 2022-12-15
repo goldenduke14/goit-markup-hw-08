@@ -7,6 +7,13 @@
   top: 0px;
   background: rgba(0, 0, 0, 0.2);
   @include transition(opacity, visibility);
+  
+
+  // mobile
+  @media screen and (max-width: $mobile) {
+    padding: 94px 15px;
+    overflow-y: scroll;
+  }
 }
 .modal-backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.3);
@@ -14,8 +21,6 @@
 .modal {
   position: absolute;
   padding: 40px;
-  width: 528px;
-  height: 581px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -25,6 +30,24 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  // mobile before 480px
+  @media screen and (max-width: 480px) {
+    width: calc(100vw - 30px);
+    max-width: 450px;
+  }
+
+  // mobile -- tablet
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  // desktop
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;  
+  }
 }
 .modal .close-sign {
   position: absolute;
