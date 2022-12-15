@@ -23,6 +23,9 @@ body {
   letter-spacing: 0.03em;
   color: $color-text;
 }
+body.modal-open {
+  overflow: hidden;
+}
 img {
   display: block;
   width: 100%;
